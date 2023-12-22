@@ -1,0 +1,32 @@
+swagger: '2.0'
+info:
+  title: 'RESTful Darwin'
+  description: A JSON RESTful API of National Rail's Darwin SOAP API.
+  version: '1.0.0'
+host: 'localhost:3000'
+schemes:
+  - 'http'
+
+paths:
+  /health:
+    get:
+      summary: 'Check the status of the server'
+      description: 'If the server is up and running correctly the response will be 200 OK'
+      consumes:
+        - 'application/json'
+      produces:
+        - 'application/json'
+      responses:
+        200:
+          description: 'Server is up and healthy'
+          schema:
+            $ref: '#/definitions/Health'
+
+definitions:
+  Health:
+    type: 'object'
+    properties:
+      status:
+        type: 'string'
+        enum:
+          - 'OK'
