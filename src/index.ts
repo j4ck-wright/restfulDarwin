@@ -5,7 +5,7 @@ import cors from 'koa2-cors';
 import logger from 'koa-logger';
 import { config } from './config';
 
-import healthRoutes from './routes/health/health';
+import healthRoutes from './routes/health';
 
 const app = new Koa();
 const PORT = config.port;
@@ -16,7 +16,7 @@ app.use(logger());
 app.use(json());
 app.use(healthRoutes.routes());
 
-const server = app
+export const server = app
   .listen(PORT, async () => {
     console.log(`🚝 - Darwin is listening on http://localhost:${PORT}`);
   })
