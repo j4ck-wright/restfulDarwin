@@ -1,5 +1,10 @@
+import { describe, it, expect, afterEach } from 'vitest';
 import request from 'supertest';
 import { server } from '../..';
+
+afterEach(() => {
+  server.close();
+});
 
 describe('/health test suite', () => {
   it('/health returns correctly', async () => {
