@@ -1,4 +1,5 @@
 import { docsRouter } from './docs';
 import { healthRouter } from './health';
+import { arrivalsRouter } from './arrivals';
 
-export { docsRouter, healthRouter };
+export { arrivalsRouter, docsRouter, healthRouter };
