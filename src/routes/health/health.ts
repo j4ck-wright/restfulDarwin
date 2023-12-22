@@ -1,5 +1,6 @@
 import Router, { RouterContext } from 'koa-router';
-const router = new Router();
+
+export const router = new Router();
 
 router.get('/health', async (ctx: RouterContext) => {
   try {
@@ -10,5 +11,3 @@ router.get('/health', async (ctx: RouterContext) => {
     console.error(e);
   }
 });
-
-export default router;

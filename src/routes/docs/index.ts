@@ -1,3 +1,3 @@
-import router from './base';
+import { router } from './docs';
 
-export default router;
+export { router as docsRouter };

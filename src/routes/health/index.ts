@@ -1,3 +1,3 @@
-import router from './health';
+import { router } from './health';
 
-export default router;
+export { router as healthRouter };
