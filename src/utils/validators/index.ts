@@ -1,3 +1,3 @@
-import { apiTokenExists } from './validators';
+import { checkApiTokenExists } from './checkApiTokenExists';
 
-export { apiTokenExists };
+export { checkApiTokenExists };

@@ -5,7 +5,7 @@ import cors from 'koa2-cors';
 import logger from 'koa-logger';
 
 import { config } from './config';
-import { apiTokenExists } from './utils/validators';
+import { checkApiTokenExists } from './utils/validators';
 
 import { arrivalsRouter, docsRouter, healthRouter } from './routes';
 
@@ -20,7 +20,7 @@ app.use(json());
 app.use(healthRouter.routes());
 app.use(docsRouter.routes());
 
-app.use(apiTokenExists);
+app.use(checkApiTokenExists);
 app.use(arrivalsRouter.routes());
 
 export const server = app
