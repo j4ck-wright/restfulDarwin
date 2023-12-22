@@ -5,7 +5,6 @@ import yamljs from 'yamljs';
 const router = new Router();
 
 const spec = yamljs.load('src/swagger.yaml');
-console.log(spec);
 
 router.get(
   '/docs',
