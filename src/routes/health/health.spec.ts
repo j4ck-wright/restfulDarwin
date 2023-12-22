@@ -1,6 +1,6 @@
 import { describe, it, expect, afterEach } from 'vitest';
 import request from 'supertest';
-import { server } from '../..';
+import { server } from '../../server';
 
 afterEach(() => {
   server.close();
