@@ -9,20 +9,19 @@ afterEach(() => {
 });
 
 describe('fetchDarwinResponse test suite', () => {
-  it('happy path returns correctly'),
-    async () => {
-      const mockReturn = `<?xml version="1.0" encoding="utf-8"?>`;
+  it('happy path returns correctly', async () => {
+    const mockReturn = `<?xml version="1.0" encoding="utf-8"?>`;
 
-      const spy = vi
-        .spyOn(axios, 'post')
-        .mockResolvedValue({ data: mockReturn, status: 200 });
+    const spy = vi
+      .spyOn(axios, 'post')
+      .mockResolvedValue({ data: mockReturn, status: 200 });
 
-      const response = await fetchDarwinResponse('xml body');
+    const response = await fetchDarwinResponse('xml body');
 
-      expect(spy).toHaveBeenCalledOnce();
-      expect(response.status).toEqual(200);
-      expect(response.data).toEqual(mockReturn);
-    };
+    expect(spy).toHaveBeenCalledOnce();
+    expect(response.status).toEqual(200);
+    expect(response.data).toEqual(mockReturn);
+  });
   it('Darwin does not return 200 OK', async () => {
     const spy = vi
       .spyOn(axios, 'post')
