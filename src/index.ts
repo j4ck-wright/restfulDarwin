@@ -5,8 +5,9 @@ import cors from 'koa2-cors';
 import logger from 'koa-logger';
 
 import { config } from './config';
+import { apiTokenExists } from './utils/validators';
 
-import { docsRouter, healthRouter } from './routes';
+import { arrivalsRouter, docsRouter, healthRouter } from './routes';
 
 const app = new Koa();
 const PORT = config.port;
@@ -18,6 +19,9 @@ app.use(json());
 
 app.use(healthRouter.routes());
 app.use(docsRouter.routes());
+
+app.use(apiTokenExists);
+app.use(arrivalsRouter.routes());
 
 export const server = app
   .listen(PORT, async () => {
