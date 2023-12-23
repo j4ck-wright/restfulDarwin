@@ -18,7 +18,7 @@ export const fetchDarwinResponse = async (xmlBody: string) => {
   } catch (error: unknown) {
     if (axios.isAxiosError(error)) {
       console.error(
-        `ERROR ~ fetchDarwinResponse: (${error.code}) ${error.response}`
+        `ERROR ~ fetchDarwinResponse: (${error.response?.status} - ${error.code}) ${error.response?.statusText}`
       );
       if (error.code) {
         statusCode = Number(error.code);
