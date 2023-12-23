@@ -22,8 +22,6 @@ router.post('/arrivals', async (ctx: RouterContext) => {
     ...params,
   };
 
-  console.log(serviceBoard.numRows);
-
   const xml = buildXMLString(arrivalsTemplate, token, serviceBoard);
   const { status, data } = await fetchDarwinResponse(xml);
 

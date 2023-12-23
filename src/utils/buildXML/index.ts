@@ -8,7 +8,7 @@ export function buildXMLString(
   let output = template.replace('!!TokenValue!!', token as string);
 
   for (const [key, value] of Object.entries(options)) {
-    if (value) {
+    if (value && value !== null && value !== 'null') {
       output = output.replace('!!' + `${key}` + '!!', `${value}`);
     }
   }
