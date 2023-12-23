@@ -36,5 +36,5 @@ export const server = app
     console.log(`🚝 - Darwin is listening on http://localhost:${PORT}`);
   })
   .on('error', (err: unknown) => {
-    console.error(err);
+    console.error(`ERROR ~ server.ts ${err}`);
   });

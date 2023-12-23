@@ -2,8 +2,9 @@ import Router, { RouterContext } from 'koa-router';
 import { xml2json } from 'xml-js';
 import { buildXMLString } from '../../utils/buildXML';
 import { type IServiceBoard } from '../../types/Darwin';
-import { departuresTemplate } from '../../utils/templates';
+import { arrivalsTemplate } from '../../utils/templates';
 import { fetchDarwinResponse } from '../../utils/darwinResponse';
+import { formatDarwinJSON } from '../../utils/formatDarwinJson';
 
 export const router = new Router();
 
@@ -21,7 +22,9 @@ router.post('/arrivals', async (ctx: RouterContext) => {
     ...params,
   };
 
-  const xml = buildXMLString(departuresTemplate, token, serviceBoard);
+  console.log(serviceBoard.numRows);
+
+  const xml = buildXMLString(arrivalsTemplate, token, serviceBoard);
   const { status, data } = await fetchDarwinResponse(xml);
 
   if (!data) {
@@ -33,6 +36,8 @@ router.post('/arrivals', async (ctx: RouterContext) => {
     spaces: 4,
   });
 
+  const formattedJson = formatDarwinJSON(jsonResponse, 'GetStationBoardResult');
+
   ctx.status = 200;
-  ctx.body = jsonResponse;
+  ctx.body = formattedJson;
 });
