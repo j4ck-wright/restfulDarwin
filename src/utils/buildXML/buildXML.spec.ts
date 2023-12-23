@@ -1,7 +1,7 @@
 import { buildXMLString } from './';
 import { departuresTemplate, serviceDetailsTemplate } from '../templates';
 
-import { describe, it, expect, vi, beforeAll, afterAll } from 'vitest';
+import { describe, it, expect, vi, afterAll } from 'vitest';
 
 import { IServiceBoard, IServiceDetails } from '../../types/Darwin';
 

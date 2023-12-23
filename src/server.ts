@@ -24,9 +24,10 @@ app.use(healthRouter.routes());
 app.use(docsRouter.routes());
 
 app.use(async (ctx, next) => {
-  !ctx.get('X-DARWIN-TOKEN')
-    ? ((ctx.body = 'X-DARWIN-TOKEN Not present'), (ctx.status = 401))
-    : await next();
+  if (!ctx.get('X-DARWIN-TOKEN')) {
+    return (ctx.body = 'X-DARWIN-TOKEN Not present'), (ctx.status = 401);
+  }
+  await next();
 });
 
 app.use(arrivalsRouter.routes());
