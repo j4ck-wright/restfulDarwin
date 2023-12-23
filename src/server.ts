@@ -5,7 +5,6 @@ import cors from 'koa2-cors';
 import logger from 'koa-logger';
 
 import { config } from './config';
-import { checkApiTokenExists } from './utils/validators';
 
 import { arrivalsRouter, docsRouter, healthRouter } from './routes';
 
@@ -24,7 +23,12 @@ app.use(json());
 app.use(healthRouter.routes());
 app.use(docsRouter.routes());
 
-app.use(checkApiTokenExists);
+app.use(async (ctx, next) => {
+  !ctx.get('X-DARWIN-TOKEN')
+    ? ((ctx.body = 'X-DARWIN-TOKEN Not present'), (ctx.status = 401))
+    : await next();
+});
+
 app.use(arrivalsRouter.routes());
 
 export const server = app
