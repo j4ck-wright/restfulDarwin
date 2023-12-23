@@ -11,7 +11,7 @@ paths:
   /health:
     get:
       summary: 'Check the status of the server'
-      description: 'If the server is up and running correctly the response will be 200 OK'
+      description: 'A health check to see if the server is responding'
       consumes:
         - 'application/json'
       produces:
@@ -21,8 +21,102 @@ paths:
           description: 'Server is up and healthy'
           schema:
             $ref: '#/definitions/Health'
+  /arrivals:
+    post:
+      summary: 'A list of arriving services'
+
+      parameters:
+        [
+          {
+            in: 'header',
+            name: 'X-DARWIN-TOKEN',
+            type: string,
+            format: uuid,
+            required: true,
+          },
+          {
+            in: 'body',
+            name: 'body',
+            schema: { $ref: '#/definitions/ServiceBoard' },
+            required: true,
+          },
+        ]
+
+      description: 'Returns a list of arriving services as well as some station details'
+      consumes:
+        - 'application/json'
+      produces:
+        - 'application/json'
+
+      responses:
+        '200':
+          description: 'OK Response'
+          schema:
+            $ref: '#/definitions/Arrivals'
+        '401':
+          description: Authorization information is missing or invalid.
+        '500':
+          description: Unexpected error.
 
 definitions:
+  ServiceBoard:
+    type: 'object'
+    properties:
+      crs:
+        type: string
+      crsFilter:
+        type: string
+        default: null
+      numRows:
+        type: number
+        minimum: 1
+        maximum: 149
+        default: 'null'
+      filterType:
+        type: string
+        enum:
+          - 'to'
+          - 'from'
+          - 'null'
+        default: 'null'
+
+      timeOffset:
+        type: number
+        minimum: -119
+        default: 'null'
+        maximum: 119
+
+  Location:
+    type: 'object'
+    properties:
+      locationName:
+        type: string
+      crs:
+        type: string
+
+  TrainService:
+    type: 'object'
+    properties:
+      sta:
+        type: 'string'
+      eta:
+        type: 'string'
+      operator:
+        type: 'string'
+      operatorCode:
+        type: 'string'
+      serviceType:
+        type: 'string'
+        enum:
+          - 'train'
+          - 'bus'
+      delayReason:
+        type: string
+
+      origin:
+        $ref: '#/definitions/Location'
+      destination:
+        $ref: '#/definitions/Location'
   Health:
     type: 'object'
     properties:
@@ -30,3 +124,22 @@ definitions:
         type: 'string'
         enum:
           - 'OK'
+  Arrivals:
+    type: 'object'
+    properties:
+      generatedAt:
+        type: string
+      locationName:
+        type: string
+      crs:
+        type: string
+      platformAvailable:
+        type: boolean
+      trainServices:
+        type: array
+        items:
+          $ref: '#/definitions/TrainService'
+      busServices:
+        type: array
+        items:
+          $ref: '#/definitions/TrainService'
