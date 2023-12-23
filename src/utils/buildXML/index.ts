@@ -8,7 +8,9 @@ export function buildXMLString(
   let output = template.replace('!!TokenValue!!', token as string);
 
   for (const [key, value] of Object.entries(options)) {
-    output = output.replace('!!' + `${key}` + '!!', `${value}`);
+    if (value) {
+      output = output.replace('!!' + `${key}` + '!!', `${value}`);
+    }
   }
 
   const removeEmptyValues = new RegExp('(<.*?!!.*?!!.*?>)', 'g');

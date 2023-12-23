@@ -29,7 +29,7 @@ describe('requestBuilder.ts test suite', () => {
   it('returns correct xml string for departure board with all values added', () => {
     const departureOptions: IServiceBoard = {
       crs: 'XXX',
-      numRows: 0,
+      numRows: 2,
       filterCrs: 'YYY',
       filterType: 'from',
       timeOffset: 5,
@@ -43,7 +43,7 @@ describe('requestBuilder.ts test suite', () => {
     );
 
     expect(xmlString).toEqual(
-      `<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://thalesgroup.com/RTTI/2013-11-28/Token/types" xmlns:ldb="http://thalesgroup.com/RTTI/2017-10-01/ldb/"><soap:Header><typ:AccessToken><typ:TokenValue>dummy-token</typ:TokenValue></typ:AccessToken></soap:Header><soap:Body><ldb:GetDepartureBoardRequest><ldb:numRows>0</ldb:numRows><ldb:crs>XXX</ldb:crs><ldb:filterCrs>YYY</ldb:filterCrs><ldb:filterType>from</ldb:filterType><ldb:timeOffset>5</ldb:timeOffset><ldb:timeWindow>10</ldb:timeWindow></ldb:GetDepartureBoardRequest></soap:Body></soap:Envelope>`
+      `<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://thalesgroup.com/RTTI/2013-11-28/Token/types" xmlns:ldb="http://thalesgroup.com/RTTI/2017-10-01/ldb/"><soap:Header><typ:AccessToken><typ:TokenValue>dummy-token</typ:TokenValue></typ:AccessToken></soap:Header><soap:Body><ldb:GetDepartureBoardRequest><ldb:numRows>2</ldb:numRows><ldb:crs>XXX</ldb:crs><ldb:filterCrs>YYY</ldb:filterCrs><ldb:filterType>from</ldb:filterType><ldb:timeOffset>5</ldb:timeOffset><ldb:timeWindow>10</ldb:timeWindow></ldb:GetDepartureBoardRequest></soap:Body></soap:Envelope>`
     );
   });
 
