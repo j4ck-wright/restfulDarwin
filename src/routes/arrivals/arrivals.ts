@@ -1,4 +1,5 @@
 import Router, { RouterContext } from 'koa-router';
+import { xml2json } from 'xml-js';
 import { buildXMLString } from '../../utils/buildXML';
 import { type IServiceBoard } from '../../types/Darwin';
 import { departuresTemplate } from '../../utils/templates';
@@ -23,9 +24,15 @@ router.post('/arrivals', async (ctx: RouterContext) => {
   const xml = buildXMLString(departuresTemplate, token, serviceBoard);
   const { status, data } = await fetchDarwinResponse(xml);
 
-  if (!data && status !== 200) {
+  if (!data) {
     return (ctx.status = status);
   }
 
-  return (ctx.status = 501), (ctx.body = 'Not implemented yet');
+  const jsonResponse = xml2json(data.toString(), {
+    compact: true,
+    spaces: 4,
+  });
+
+  ctx.status = 200;
+  ctx.body = jsonResponse;
 });
