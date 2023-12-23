@@ -1,61 +1,63 @@
 import { xml2json } from 'xml-js';
+import { ILocation, IMappedService } from '../../types/Darwin';
+import {
+  ILocationRaw,
+  IServiceRaw,
+  IServiceResponseRaw,
+  IText,
+  InrccMessageRaw,
+} from '../../types/DarwinRaw';
 
-const getText = ({ _text }: { _text?: string | boolean }) => {
-  if (!_text) return;
-  switch (_text) {
-    case 'true':
-      return true;
-    case 'false':
-      return false;
-    default:
-      return _text;
+const instanceOfIText = (object: unknown): object is IText => {
+  if (typeof object === 'object' && object) {
+    return '_text' in object;
   }
+  return false;
 };
 
-const getLocation = (location: {
-  locationName: { _text?: string };
-  crs: { _text?: string };
-}) => {
+const getText = ({ _text }: IText) => {
+  return _text;
+};
+
+const getLocation = ({ location }: ILocationRaw) => {
   if (!location) return;
   return {
     locationName: getText(location.locationName),
     crs: getText(location.crs),
-  };
+  } as ILocation;
 };
 
-const removeObjectNestedText = (obj: any) => {
-  const formatted: Record<string, string | boolean> = {};
-  for (const key in obj) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
-      const text = getText(obj[key]);
-      if (text) {
-        formatted[key] = text;
+const handleNrccMessages = (nrcc?: InrccMessageRaw) => {
+  const messages = nrcc?.message;
+  if (!messages) return;
+  if (instanceOfIText(messages)) {
+    return [messages._text];
+  } else {
+    return messages.map((msg) => {
+      return msg._text;
+    });
+  }
+};
+
+const mapService = (services: IServiceRaw[]) => {
+  return services.map((service) => {
+    const serviceData: Record<string, string | ILocation | undefined> = {};
+    for (const [key, value] of Object.entries(service)) {
+      if (instanceOfIText(value)) {
+        serviceData[key] = value._text;
       }
     }
-  }
-  return formatted;
-};
 
-const getService = (service: any) => {
-  if (service?.length) {
-    return service.map((s: any) => {
-      return mapService(s);
-    });
-  } else {
-    return [mapService(service)];
-  }
-};
+    if (service.origin) {
+      serviceData.origin = getLocation(service.origin);
+    }
 
-const mapService = (service: any) => {
-  const formatted = removeObjectNestedText(service);
-  const origin = service?.origin?.location;
-  const destination = service?.destination?.location;
+    if (service.destination) {
+      serviceData.destination = getLocation(service.destination);
+    }
 
-  return {
-    ...formatted,
-    origin: getLocation(origin),
-    destination: getLocation(destination),
-  };
+    return serviceData as unknown as IMappedService[];
+  });
 };
 
 export const formatDarwinJSON = (
@@ -67,23 +69,43 @@ export const formatDarwinJSON = (
     spaces: 4,
   });
 
-  const jsonParsed = JSON.parse(
-    json.replaceAll(/lt(\d+):/g, '').replaceAll('length', 'trainLength')
+  let cleanJson = JSON.parse(
+    json
+      .replaceAll(/lt(\d+):/g, '') // Removes ltn: where n is an integer
+      .replaceAll(/lt:/g, '') // Removes lt: found in nrccMessages
+      .replaceAll('length', 'serviceLength') // Renames length to serviceLength to use .length in an object
   );
 
-  const squashedJson =
-    jsonParsed!['soap:Envelope']['soap:Body'].GetArrivalBoardResponse[key];
-  delete squashedJson._attributes;
+  cleanJson =
+    cleanJson['soap:Envelope']['soap:Body'][key].GetStationBoardResult;
 
-  const formatted: Record<string, string | boolean | any[]> = {
-    ...removeObjectNestedText(squashedJson),
-  };
+  delete cleanJson._attributes;
 
-  const trainServices = getService(squashedJson.trainServices?.service);
-  formatted.trainServices = trainServices;
+  // We're now at a state where we can start to manipulate the response easier
+  const raw: IServiceResponseRaw = cleanJson;
+  const formatted: Record<string, unknown> = {};
 
-  const busServices = getService(squashedJson.busServices?.service);
-  formatted.busServices = busServices;
+  for (const rawKey in raw) {
+    const val = raw[rawKey as keyof IServiceResponseRaw];
+    if (instanceOfIText(val)) {
+      formatted[rawKey] = getText(val);
+    }
+  }
+
+  formatted.nrccMessages =
+    handleNrccMessages(raw?.nrccMessages) || ([] as string[]);
+
+  if (raw.trainServices && raw.trainServices.service) {
+    formatted.trainServices = mapService(raw.trainServices.service);
+  } else {
+    formatted.trainServices = [];
+  }
+
+  if (raw.busServices && raw.busServices.service) {
+    formatted.busServices = mapService(raw.busServices.service);
+  } else {
+    formatted.busServices = [];
+  }
 
   return JSON.stringify(formatted, undefined, 4);
 };

@@ -19,14 +19,16 @@ export interface ILocation {
 export interface IMappedService {
   sta: string;
   eta: string | 'On time' | 'Delayed' | 'Cancelled';
+  platform?: string;
   operator: string;
   operatorCode: string;
   serviceType: 'train' | 'bus';
   trainLength?: string;
   serviceID: string;
+  nrccMessages: string[];
   rsid?: string;
-  origin: ILocation;
-  destination: ILocation;
+  origin?: ILocation;
+  destination?: ILocation;
 }
 
 export interface IMappedResponse {

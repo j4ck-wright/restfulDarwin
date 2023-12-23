@@ -152,7 +152,7 @@
       "operator": "TransPennine Express",
       "operatorCode": "TP",
       "serviceType": "train",
-      "trainLength": "6",
+      "serviceLength": "6",
       "serviceID": "2851254LEEDS___",
       "origin": {
         "locationName": "Hull",
@@ -186,7 +186,7 @@
       "operator": "CrossCountry",
       "operatorCode": "XC",
       "serviceType": "train",
-      "trainLength": "5",
+      "serviceLength": "5",
       "serviceID": "2839925LEEDS___",
       "origin": {
         "locationName": "Penzance",
@@ -271,7 +271,7 @@
       "operator": "TransPennine Express",
       "operatorCode": "TP",
       "serviceType": "train",
-      "trainLength": "6",
+      "serviceLength": "6",
       "serviceID": "2851400LEEDS___",
       "origin": {
         "locationName": "Manchester Airport",
@@ -305,7 +305,7 @@
       "operator": "TransPennine Express",
       "operatorCode": "TP",
       "serviceType": "train",
-      "trainLength": "5",
+      "serviceLength": "5",
       "delayReason": "This train has been delayed by congestion",
       "serviceID": "2843088LEEDS___",
       "rsid": "TP512900",
@@ -427,7 +427,7 @@
       "operator": "TransPennine Express",
       "operatorCode": "TP",
       "serviceType": "train",
-      "trainLength": "6",
+      "serviceLength": "6",
       "serviceID": "2851553LEEDS___",
       "origin": {
         "locationName": "Manchester Piccadilly",
@@ -544,7 +544,7 @@
       "operator": "TransPennine Express",
       "operatorCode": "TP",
       "serviceType": "train",
-      "trainLength": "5",
+      "serviceLength": "5",
       "serviceID": "2842999LEEDS___",
       "rsid": "TP513600",
       "origin": {
@@ -612,7 +612,7 @@
       "operator": "TransPennine Express",
       "operatorCode": "TP",
       "serviceType": "train",
-      "trainLength": "6",
+      "serviceLength": "6",
       "serviceID": "2845184LEEDS___",
       "origin": {
         "locationName": "Saltburn",
@@ -744,7 +744,7 @@
       "operator": "TransPennine Express",
       "operatorCode": "TP",
       "serviceType": "train",
-      "trainLength": "3",
+      "serviceLength": "3",
       "serviceID": "2851256LEEDS___",
       "origin": {
         "locationName": "Hull",
@@ -843,7 +843,7 @@
       "operator": "TransPennine Express",
       "operatorCode": "TP",
       "serviceType": "train",
-      "trainLength": "3",
+      "serviceLength": "3",
       "serviceID": "2851614LEEDS___",
       "origin": {
         "locationName": "Manchester Airport",
@@ -876,7 +876,7 @@
       "operator": "TransPennine Express",
       "operatorCode": "TP",
       "serviceType": "train",
-      "trainLength": "5",
+      "serviceLength": "5",
       "serviceID": "2838301LEEDS___",
       "rsid": "TP513300",
       "origin": {
@@ -992,7 +992,7 @@
       "operator": "TransPennine Express",
       "operatorCode": "TP",
       "serviceType": "train",
-      "trainLength": "6",
+      "serviceLength": "6",
       "serviceID": "2838496LEEDS___",
       "rsid": "TP543600",
       "origin": {
@@ -1108,7 +1108,7 @@
       "operator": "TransPennine Express",
       "operatorCode": "TP",
       "serviceType": "train",
-      "trainLength": "5",
+      "serviceLength": "5",
       "serviceID": "2843004LEEDS___",
       "rsid": "TP514000",
       "origin": {
@@ -1158,7 +1158,7 @@
       "operator": "TransPennine Express",
       "operatorCode": "TP",
       "serviceType": "train",
-      "trainLength": "6",
+      "serviceLength": "6",
       "serviceID": "2845189LEEDS___",
       "origin": {
         "locationName": "Saltburn",

@@ -1,5 +1,4 @@
 import Router, { RouterContext } from 'koa-router';
-import { xml2json } from 'xml-js';
 import { buildXMLString } from '../../utils/buildXML';
 import { type IServiceBoard } from '../../types/Darwin';
 import { arrivalsTemplate } from '../../utils/templates';
@@ -29,7 +28,7 @@ router.post('/arrivals', async (ctx: RouterContext) => {
     return (ctx.status = status);
   }
 
-  const formattedJson = formatDarwinJSON(data, 'GetStationBoardResult');
+  const formattedJson = formatDarwinJSON(data, 'GetArrivalBoardResponse');
 
   ctx.status = 200;
   ctx.body = formattedJson;
