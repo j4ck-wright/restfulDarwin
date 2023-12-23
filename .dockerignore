@@ -1,0 +1,13 @@
+.env
+/node_modules/*
+coverage/*
+dist/*
+.eslintignore
+eslintrc.json
+.prettierignore
+.prettierrc
+nodemon.json
+README.md
+tsconfig.eslint.json
+tslint.json
+vitest.config.ts

@@ -11,10 +11,6 @@ import { arrivalsRouter, docsRouter, healthRouter } from './routes';
 const app = new Koa();
 const PORT = config.port;
 
-if (!config.darwin_endpoint) {
-  throw Error(`🚝 - Darwin endpoint missing from config file. Aborting.`);
-}
-
 app.use(bodyParser());
 app.use(cors({ origin: '*' }));
 app.use(logger());
@@ -35,6 +31,7 @@ app.use(arrivalsRouter.routes());
 export const server = app
   .listen(PORT, async () => {
     console.log(`🚝 - Darwin is listening on http://localhost:${PORT}`);
+    console.log(`🚝 - Using OpenLDBWS at ${config.darwin_endpoint}`);
   })
   .on('error', (err: unknown) => {
     console.error(`ERROR ~ server.ts ${err}`);
