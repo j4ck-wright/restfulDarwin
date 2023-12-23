@@ -10,3 +10,30 @@ export interface IServiceBoard {
 export interface IServiceDetails {
   serviceID: string;
 }
+
+export interface ILocation {
+  locationName: string;
+  crs: string;
+}
+
+export interface IMappedService {
+  sta: string;
+  eta: string | 'On time' | 'Delayed' | 'Cancelled';
+  operator: string;
+  operatorCode: string;
+  serviceType: 'train' | 'bus';
+  trainLength?: string;
+  serviceID: string;
+  rsid?: string;
+  origin: ILocation;
+  destination: ILocation;
+}
+
+export interface IMappedResponse {
+  generatedAt: string;
+  locationName: string;
+  crs: string;
+  platformAvailable: boolean;
+  trainServices: IMappedService[];
+  busServices: IMappedService[];
+}
