@@ -29,12 +29,7 @@ router.post('/arrivals', async (ctx: RouterContext) => {
     return (ctx.status = status);
   }
 
-  const jsonResponse = xml2json(data.toString(), {
-    compact: true,
-    spaces: 4,
-  });
-
-  const formattedJson = formatDarwinJSON(jsonResponse, 'GetStationBoardResult');
+  const formattedJson = formatDarwinJSON(data, 'GetStationBoardResult');
 
   ctx.status = 200;
   ctx.body = formattedJson;

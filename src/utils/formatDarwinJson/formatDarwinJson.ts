@@ -1,3 +1,5 @@
+import { xml2json } from 'xml-js';
+
 const getText = ({ _text }: { _text?: string | boolean }) => {
   if (!_text) return;
   switch (_text) {
@@ -56,23 +58,31 @@ const mapService = (service: any) => {
   };
 };
 
-export const formatDarwinJSON = (input: string, key: string) => {
+export const formatDarwinJSON = (
+  input: XMLHttpRequestBodyInit,
+  key: string
+) => {
+  const json = xml2json(input.toString(), {
+    compact: true,
+    spaces: 4,
+  });
+
   const jsonParsed = JSON.parse(
-    input.replaceAll(/lt(\d+):/g, '').replaceAll('length', 'trainLength')
+    json.replaceAll(/lt(\d+):/g, '').replaceAll('length', 'trainLength')
   );
 
-  let json =
-    jsonParsed!['soap:Envelope']['soap:Body']['GetArrivalBoardResponse'][key];
-  delete json['_attributes'];
+  const squashedJson =
+    jsonParsed!['soap:Envelope']['soap:Body'].GetArrivalBoardResponse[key];
+  delete squashedJson._attributes;
 
   const formatted: Record<string, string | boolean | any[]> = {
-    ...removeObjectNestedText(json),
+    ...removeObjectNestedText(squashedJson),
   };
 
-  const trainServices = getService(json.trainServices?.service);
+  const trainServices = getService(squashedJson.trainServices?.service);
   formatted.trainServices = trainServices;
 
-  const busServices = getService(json.busServices?.service);
+  const busServices = getService(squashedJson.busServices?.service);
   formatted.busServices = busServices;
 
   return JSON.stringify(formatted, undefined, 4);

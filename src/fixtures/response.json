@@ -1,0 +1,1321 @@
+{
+  "generatedAt": "2023-12-23T13:54:39.4621476+00:00",
+  "locationName": "Leeds",
+  "crs": "LDS",
+  "platformAvailable": true,
+  "trainServices": [
+    {
+      "sta": "12:47",
+      "eta": "13:55",
+      "platform": "6",
+      "operator": "London North Eastern Railway",
+      "operatorCode": "GR",
+      "serviceType": "train",
+      "delayReason": "This train has been delayed by a tree blocking the railway",
+      "serviceID": "2844215LEEDS___",
+      "rsid": "GR220700",
+      "origin": {
+        "locationName": "London Kings Cross",
+        "crs": "KGX"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "13:16",
+      "eta": "14:12",
+      "platform": "8",
+      "operator": "London North Eastern Railway",
+      "operatorCode": "GR",
+      "serviceType": "train",
+      "delayReason": "This train has been delayed by a tree blocking the railway",
+      "serviceID": "2854880LEEDS___",
+      "rsid": "GR222700",
+      "origin": {
+        "locationName": "London Kings Cross",
+        "crs": "KGX"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "13:45",
+      "eta": "14:26",
+      "platform": "TBC",
+      "operator": "London North Eastern Railway",
+      "operatorCode": "GR",
+      "serviceType": "train",
+      "delayReason": "This train has been delayed by a tree blocking the railway",
+      "serviceID": "2842488LEEDS___",
+      "rsid": "GR224700",
+      "origin": {
+        "locationName": "London Kings Cross",
+        "crs": "KGX"
+      },
+      "destination": {
+        "locationName": "Harrogate",
+        "crs": "HGT"
+      }
+    },
+    {
+      "sta": "13:52",
+      "eta": "13:58",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2860842LEEDS___",
+      "origin": {
+        "locationName": "York",
+        "crs": "YRK"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "13:53",
+      "eta": "13:50",
+      "platform": "8D",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2854713LEEDS___",
+      "origin": {
+        "locationName": "Halifax",
+        "crs": "HFX"
+      },
+      "destination": {
+        "locationName": "Hull",
+        "crs": "HUL"
+      }
+    },
+    {
+      "sta": "13:53",
+      "eta": "Cancelled",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "isCancelled": true,
+      "serviceType": "train",
+      "cancelReason": "This train has been cancelled because of a member of train crew being unavailable",
+      "serviceID": "2841317LEEDS___",
+      "origin": {
+        "locationName": "York",
+        "crs": "YRK"
+      },
+      "destination": {
+        "locationName": "Blackpool North",
+        "crs": "BPN"
+      }
+    },
+    {
+      "sta": "13:54",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2851702LEEDS___",
+      "rsid": "NT121800",
+      "origin": {
+        "locationName": "Knottingley",
+        "crs": "KNO"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "13:56",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2855370LEEDS___",
+      "origin": {
+        "locationName": "Bradford Forster Square",
+        "crs": "BDQ"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "13:57",
+      "eta": "On time",
+      "platform": "16",
+      "operator": "TransPennine Express",
+      "operatorCode": "TP",
+      "serviceType": "train",
+      "trainLength": "6",
+      "serviceID": "2851254LEEDS___",
+      "origin": {
+        "locationName": "Hull",
+        "crs": "HUL"
+      },
+      "destination": {
+        "locationName": "Manchester Piccadilly",
+        "crs": "MAN"
+      }
+    },
+    {
+      "sta": "14:00",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2854479LEEDS___",
+      "origin": {
+        "locationName": "Skipton",
+        "crs": "SKI"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "14:01",
+      "eta": "14:04",
+      "platform": "8D",
+      "operator": "CrossCountry",
+      "operatorCode": "XC",
+      "serviceType": "train",
+      "trainLength": "5",
+      "serviceID": "2839925LEEDS___",
+      "origin": {
+        "locationName": "Penzance",
+        "crs": "PNZ"
+      },
+      "destination": {
+        "locationName": "Edinburgh",
+        "crs": "EDB"
+      }
+    },
+    {
+      "sta": "14:04",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2851900LEEDS___",
+      "origin": {
+        "locationName": "Wigan Wallgate",
+        "crs": "WGW"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "14:07",
+      "eta": "14:30",
+      "platform": "12A",
+      "operator": "CrossCountry",
+      "operatorCode": "XC",
+      "serviceType": "train",
+      "serviceID": "2840005LEEDS___",
+      "rsid": "XC169700",
+      "origin": {
+        "locationName": "Dundee",
+        "crs": "DEE"
+      },
+      "destination": {
+        "locationName": "Penzance",
+        "crs": "PNZ"
+      }
+    },
+    {
+      "sta": "14:07",
+      "eta": "On time",
+      "platform": "9",
+      "operator": "London North Eastern Railway",
+      "operatorCode": "GR",
+      "serviceType": "train",
+      "serviceID": "2842440LEEDS___",
+      "origin": {
+        "locationName": "Harrogate",
+        "crs": "HGT"
+      },
+      "destination": {
+        "locationName": "London Kings Cross",
+        "crs": "KGX"
+      }
+    },
+    {
+      "sta": "14:09",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2855924LEEDS___",
+      "origin": {
+        "locationName": "Ilkley",
+        "crs": "ILK"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "14:10",
+      "eta": "14:13",
+      "platform": "15",
+      "operator": "TransPennine Express",
+      "operatorCode": "TP",
+      "serviceType": "train",
+      "trainLength": "6",
+      "serviceID": "2851400LEEDS___",
+      "origin": {
+        "locationName": "Manchester Airport",
+        "crs": "MIA"
+      },
+      "destination": {
+        "locationName": "Saltburn",
+        "crs": "SLB"
+      }
+    },
+    {
+      "sta": "14:11",
+      "eta": "14:14",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2849390LEEDS___",
+      "origin": {
+        "locationName": "Doncaster",
+        "crs": "DON"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "14:13",
+      "eta": "14:35",
+      "platform": "16",
+      "operator": "TransPennine Express",
+      "operatorCode": "TP",
+      "serviceType": "train",
+      "trainLength": "5",
+      "delayReason": "This train has been delayed by congestion",
+      "serviceID": "2843088LEEDS___",
+      "rsid": "TP512900",
+      "origin": {
+        "locationName": "Newcastle",
+        "crs": "NCL"
+      },
+      "destination": {
+        "locationName": "Liverpool Lime Street",
+        "crs": "LIV"
+      }
+    },
+    {
+      "sta": "14:14",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2848680LEEDS___",
+      "origin": {
+        "locationName": "Manchester Victoria",
+        "crs": "MCV"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "14:14",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2849138LEEDS___",
+      "origin": {
+        "locationName": "Nottingham",
+        "crs": "NOT"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "14:16",
+      "eta": "14:52",
+      "platform": "8",
+      "operator": "London North Eastern Railway",
+      "operatorCode": "GR",
+      "serviceType": "train",
+      "delayReason": "This train has been delayed by a tree blocking the railway",
+      "serviceID": "2859857LEEDS___",
+      "rsid": "GR226700",
+      "origin": {
+        "locationName": "London Kings Cross",
+        "crs": "KGX"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "14:22",
+      "eta": "Cancelled",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "isCancelled": true,
+      "serviceType": "train",
+      "cancelReason": "This train has been cancelled because of a member of train crew being unavailable",
+      "serviceID": "2853616LEEDS___",
+      "origin": {
+        "locationName": "York",
+        "crs": "YRK"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "14:23",
+      "eta": "On time",
+      "platform": "12C",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2842130LEEDS___",
+      "origin": {
+        "locationName": "Hull",
+        "crs": "HUL"
+      },
+      "destination": {
+        "locationName": "Halifax",
+        "crs": "HFX"
+      }
+    },
+    {
+      "sta": "14:24",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2849211LEEDS___",
+      "origin": {
+        "locationName": "Knottingley",
+        "crs": "KNO"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "14:24",
+      "eta": "On time",
+      "platform": "15",
+      "operator": "TransPennine Express",
+      "operatorCode": "TP",
+      "serviceType": "train",
+      "trainLength": "6",
+      "serviceID": "2851553LEEDS___",
+      "origin": {
+        "locationName": "Manchester Piccadilly",
+        "crs": "MAN"
+      },
+      "destination": {
+        "locationName": "Hull",
+        "crs": "HUL"
+      }
+    },
+    {
+      "sta": "14:24",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2849469LEEDS___",
+      "origin": {
+        "locationName": "Sheffield",
+        "crs": "SHF"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "14:25",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2855375LEEDS___",
+      "rsid": "NT543300",
+      "origin": {
+        "locationName": "Bradford Forster Square",
+        "crs": "BDQ"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "14:27",
+      "eta": "Cancelled",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "isCancelled": true,
+      "serviceType": "train",
+      "cancelReason": "This train has been cancelled because of a member of train crew being unavailable",
+      "serviceID": "2851509LEEDS___",
+      "origin": {
+        "locationName": "Blackpool North",
+        "crs": "BPN"
+      },
+      "destination": {
+        "locationName": "York",
+        "crs": "YRK"
+      }
+    },
+    {
+      "sta": "14:29",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2861040LEEDS___",
+      "origin": {
+        "locationName": "Skipton",
+        "crs": "SKI"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "14:33",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2849590LEEDS___",
+      "origin": {
+        "locationName": "Sheffield",
+        "crs": "SHF"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "14:37",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2861471LEEDS___",
+      "origin": {
+        "locationName": "Skipton",
+        "crs": "SKI"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "14:40",
+      "eta": "On time",
+      "platform": "15",
+      "operator": "TransPennine Express",
+      "operatorCode": "TP",
+      "serviceType": "train",
+      "trainLength": "5",
+      "serviceID": "2842999LEEDS___",
+      "rsid": "TP513600",
+      "origin": {
+        "locationName": "Liverpool Lime Street",
+        "crs": "LIV"
+      },
+      "destination": {
+        "locationName": "Newcastle",
+        "crs": "NCL"
+      }
+    },
+    {
+      "sta": "14:40",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2855851LEEDS___",
+      "rsid": "NT216600",
+      "origin": {
+        "locationName": "York",
+        "crs": "YRK"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "14:41",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2855927LEEDS___",
+      "origin": {
+        "locationName": "Ilkley",
+        "crs": "ILK"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "14:42",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2851622LEEDS___",
+      "origin": {
+        "locationName": "Chester",
+        "crs": "CTR"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "14:43",
+      "eta": "On time",
+      "platform": "16",
+      "operator": "TransPennine Express",
+      "operatorCode": "TP",
+      "serviceType": "train",
+      "trainLength": "6",
+      "serviceID": "2845184LEEDS___",
+      "origin": {
+        "locationName": "Saltburn",
+        "crs": "SLB"
+      },
+      "destination": {
+        "locationName": "Manchester Airport",
+        "crs": "MIA"
+      }
+    },
+    {
+      "sta": "14:45",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2860664LEEDS___",
+      "origin": {
+        "locationName": "Lincoln Central",
+        "crs": "LCN"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "14:47",
+      "eta": "15:07",
+      "platform": "6",
+      "operator": "London North Eastern Railway",
+      "operatorCode": "GR",
+      "serviceType": "train",
+      "delayReason": "This train has been delayed by a tree blocking the railway",
+      "serviceID": "2844223LEEDS___",
+      "rsid": "GR230700",
+      "origin": {
+        "locationName": "London Kings Cross",
+        "crs": "KGX"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "14:52",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2854235LEEDS___",
+      "origin": {
+        "locationName": "Halifax",
+        "crs": "HFX"
+      },
+      "destination": {
+        "locationName": "Hull",
+        "crs": "HUL"
+      }
+    },
+    {
+      "sta": "14:52",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2853610LEEDS___",
+      "origin": {
+        "locationName": "York",
+        "crs": "YRK"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "14:53",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2851516LEEDS___",
+      "origin": {
+        "locationName": "York",
+        "crs": "YRK"
+      },
+      "destination": {
+        "locationName": "Blackpool North",
+        "crs": "BPN"
+      }
+    },
+    {
+      "sta": "14:54",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2854086LEEDS___",
+      "origin": {
+        "locationName": "Knottingley",
+        "crs": "KNO"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "14:56",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2855380LEEDS___",
+      "origin": {
+        "locationName": "Bradford Forster Square",
+        "crs": "BDQ"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "14:57",
+      "eta": "On time",
+      "operator": "TransPennine Express",
+      "operatorCode": "TP",
+      "serviceType": "train",
+      "trainLength": "3",
+      "serviceID": "2851256LEEDS___",
+      "origin": {
+        "locationName": "Hull",
+        "crs": "HUL"
+      },
+      "destination": {
+        "locationName": "Manchester Piccadilly",
+        "crs": "MAN"
+      }
+    },
+    {
+      "sta": "14:59",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2861043LEEDS___",
+      "origin": {
+        "locationName": "Skipton",
+        "crs": "SKI"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "15:01",
+      "eta": "On time",
+      "operator": "CrossCountry",
+      "operatorCode": "XC",
+      "serviceType": "train",
+      "serviceID": "2848896LEEDS___",
+      "rsid": "XC114700",
+      "origin": {
+        "locationName": "Plymouth",
+        "crs": "PLY"
+      },
+      "destination": {
+        "locationName": "Aberdeen",
+        "crs": "ABD"
+      }
+    },
+    {
+      "sta": "15:04",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2851906LEEDS___",
+      "origin": {
+        "locationName": "Wigan Wallgate",
+        "crs": "WGW"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "15:07",
+      "eta": "On time",
+      "operator": "CrossCountry",
+      "operatorCode": "XC",
+      "serviceType": "train",
+      "serviceID": "2840009LEEDS___",
+      "rsid": "XC171700",
+      "origin": {
+        "locationName": "Edinburgh",
+        "crs": "EDB"
+      },
+      "destination": {
+        "locationName": "Plymouth",
+        "crs": "PLY"
+      }
+    },
+    {
+      "sta": "15:08",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2855932LEEDS___",
+      "origin": {
+        "locationName": "Ilkley",
+        "crs": "ILK"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "15:10",
+      "eta": "On time",
+      "operator": "TransPennine Express",
+      "operatorCode": "TP",
+      "serviceType": "train",
+      "trainLength": "3",
+      "serviceID": "2851614LEEDS___",
+      "origin": {
+        "locationName": "Manchester Airport",
+        "crs": "MIA"
+      },
+      "destination": {
+        "locationName": "Saltburn",
+        "crs": "SLB"
+      }
+    },
+    {
+      "sta": "15:11",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2849394LEEDS___",
+      "origin": {
+        "locationName": "Doncaster",
+        "crs": "DON"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "15:12",
+      "eta": "On time",
+      "operator": "TransPennine Express",
+      "operatorCode": "TP",
+      "serviceType": "train",
+      "trainLength": "5",
+      "serviceID": "2838301LEEDS___",
+      "rsid": "TP513300",
+      "origin": {
+        "locationName": "Newcastle",
+        "crs": "NCL"
+      },
+      "destination": {
+        "locationName": "Liverpool Lime Street",
+        "crs": "LIV"
+      }
+    },
+    {
+      "sta": "15:14",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2851827LEEDS___",
+      "origin": {
+        "locationName": "Manchester Victoria",
+        "crs": "MCV"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "15:14",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2849144LEEDS___",
+      "origin": {
+        "locationName": "Sheffield",
+        "crs": "SHF"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "15:16",
+      "eta": "On time",
+      "operator": "London North Eastern Railway",
+      "operatorCode": "GR",
+      "serviceType": "train",
+      "serviceID": "2859860LEEDS___",
+      "rsid": "GR232700",
+      "origin": {
+        "locationName": "London Kings Cross",
+        "crs": "KGX"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "15:23",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2853626LEEDS___",
+      "rsid": "NT635700",
+      "origin": {
+        "locationName": "York",
+        "crs": "YRK"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "15:24",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2851864LEEDS___",
+      "origin": {
+        "locationName": "Hull",
+        "crs": "HUL"
+      },
+      "destination": {
+        "locationName": "Halifax",
+        "crs": "HFX"
+      }
+    },
+    {
+      "sta": "15:24",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2849221LEEDS___",
+      "origin": {
+        "locationName": "Knottingley",
+        "crs": "KNO"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "15:24",
+      "eta": "On time",
+      "operator": "TransPennine Express",
+      "operatorCode": "TP",
+      "serviceType": "train",
+      "trainLength": "6",
+      "serviceID": "2838496LEEDS___",
+      "rsid": "TP543600",
+      "origin": {
+        "locationName": "Manchester Piccadilly",
+        "crs": "MAN"
+      },
+      "destination": {
+        "locationName": "Hull",
+        "crs": "HUL"
+      }
+    },
+    {
+      "sta": "15:24",
+      "eta": "Cancelled",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "isCancelled": true,
+      "serviceType": "train",
+      "cancelReason": "This train has been cancelled because of a member of train crew being unavailable",
+      "serviceID": "2849474LEEDS___",
+      "origin": {
+        "locationName": "Sheffield",
+        "crs": "SHF"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "15:25",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2855383LEEDS___",
+      "origin": {
+        "locationName": "Bradford Forster Square",
+        "crs": "BDQ"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "15:27",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2851513LEEDS___",
+      "origin": {
+        "locationName": "Blackpool North",
+        "crs": "BPN"
+      },
+      "destination": {
+        "locationName": "York",
+        "crs": "YRK"
+      }
+    },
+    {
+      "sta": "15:29",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2861045LEEDS___",
+      "origin": {
+        "locationName": "Skipton",
+        "crs": "SKI"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "15:30",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2849600LEEDS___",
+      "origin": {
+        "locationName": "Sheffield",
+        "crs": "SHF"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "15:38",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2855936LEEDS___",
+      "origin": {
+        "locationName": "Ilkley",
+        "crs": "ILK"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "15:39",
+      "eta": "On time",
+      "operator": "TransPennine Express",
+      "operatorCode": "TP",
+      "serviceType": "train",
+      "trainLength": "5",
+      "serviceID": "2843004LEEDS___",
+      "rsid": "TP514000",
+      "origin": {
+        "locationName": "Liverpool Lime Street",
+        "crs": "LIV"
+      },
+      "destination": {
+        "locationName": "Newcastle",
+        "crs": "NCL"
+      }
+    },
+    {
+      "sta": "15:41",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2851627LEEDS___",
+      "origin": {
+        "locationName": "Chester",
+        "crs": "CTR"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "15:41",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2842202LEEDS___",
+      "origin": {
+        "locationName": "York",
+        "crs": "YRK"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "15:43",
+      "eta": "On time",
+      "operator": "TransPennine Express",
+      "operatorCode": "TP",
+      "serviceType": "train",
+      "trainLength": "6",
+      "serviceID": "2845189LEEDS___",
+      "origin": {
+        "locationName": "Saltburn",
+        "crs": "SLB"
+      },
+      "destination": {
+        "locationName": "Manchester Airport",
+        "crs": "MIA"
+      }
+    },
+    {
+      "sta": "15:44",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2860668LEEDS___",
+      "origin": {
+        "locationName": "Lincoln Central",
+        "crs": "LCN"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "15:45",
+      "eta": "15:59",
+      "operator": "London North Eastern Railway",
+      "operatorCode": "GR",
+      "serviceType": "train",
+      "delayReason": "This train has been delayed by a tree blocking the railway",
+      "serviceID": "2842491LEEDS___",
+      "rsid": "GR234700",
+      "origin": {
+        "locationName": "London Kings Cross",
+        "crs": "KGX"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "15:53",
+      "eta": "On time",
+      "operator": "Northern",
+      "operatorCode": "NT",
+      "serviceType": "train",
+      "serviceID": "2860847LEEDS___",
+      "origin": {
+        "locationName": "Harrogate",
+        "crs": "HGT"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    }
+  ],
+  "busServices": [
+    {
+      "sta": "14:05",
+      "eta": "On time",
+      "operator": "CrossCountry",
+      "operatorCode": "XC",
+      "serviceType": "bus",
+      "serviceID": "2856331LEEDS___",
+      "origin": {
+        "locationName": "Leeds Bradford Airport (Bus)",
+        "crs": "XLB"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "14:25",
+      "eta": "On time",
+      "operator": "CrossCountry",
+      "operatorCode": "XC",
+      "serviceType": "bus",
+      "serviceID": "2856302LEEDS___",
+      "origin": {
+        "locationName": "Leeds Bradford Airport (Bus)",
+        "crs": "XLB"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "14:45",
+      "eta": "On time",
+      "operator": "CrossCountry",
+      "operatorCode": "XC",
+      "serviceType": "bus",
+      "serviceID": "2856309LEEDS___",
+      "origin": {
+        "locationName": "Leeds Bradford Airport (Bus)",
+        "crs": "XLB"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "15:05",
+      "eta": "On time",
+      "operator": "CrossCountry",
+      "operatorCode": "XC",
+      "serviceType": "bus",
+      "serviceID": "2856305LEEDS___",
+      "origin": {
+        "locationName": "Leeds Bradford Airport (Bus)",
+        "crs": "XLB"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "15:25",
+      "eta": "On time",
+      "operator": "CrossCountry",
+      "operatorCode": "XC",
+      "serviceType": "bus",
+      "serviceID": "2856297LEEDS___",
+      "origin": {
+        "locationName": "Leeds Bradford Airport (Bus)",
+        "crs": "XLB"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    },
+    {
+      "sta": "15:45",
+      "eta": "On time",
+      "operator": "CrossCountry",
+      "operatorCode": "XC",
+      "serviceType": "bus",
+      "serviceID": "2856337LEEDS___",
+      "origin": {
+        "locationName": "Leeds Bradford Airport (Bus)",
+        "crs": "XLB"
+      },
+      "destination": {
+        "locationName": "Leeds",
+        "crs": "LDS"
+      }
+    }
+  ]
+}
